@@ -1,0 +1,12 @@
+# Gate checklist (copy into completion note)
+- [ ] All acceptance criteria have a passing test
+- [ ] Unit tests pass and cover core logic
+- [ ] Integration test passes with real DB and real files
+- [ ] Golden-data test matches the answer key
+- [ ] Edge-case datasets don't crash anything; errors are readable
+- [ ] Regression suite for earlier features is green
+- [ ] UI: loading, empty and error states checked
+- [ ] Performance: stated limit met (state the number)
+- [ ] No source data modified; no secrets in logs
+- [ ] Audit log entries present for every state change
+- [ ] Docs and DECISIONS.md updated

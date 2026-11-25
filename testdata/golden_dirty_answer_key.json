@@ -1,0 +1,975 @@
+{
+ "rows": 1050,
+ "columns": [
+  "customer_id",
+  "name",
+  "email",
+  "phone",
+  "city",
+  "age",
+  "signup_date",
+  "end_date",
+  "amount",
+  "status"
+ ],
+ "summary": {
+  "disguised_null": 30,
+  "invalid_format": 20,
+  "outlier": 15,
+  "inconsistent_category": 40,
+  "rule_violation_end_before_start": 25,
+  "duplicate": 50
+ },
+ "planted": [
+  {
+   "defect": "disguised_null",
+   "row": 266,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 152,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 91,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 981,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 376,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 174,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 969,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 580,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 120,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 14,
+   "column": "city"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 735,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 538,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 445,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 791,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 942,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 950,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 464,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 847,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 689,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 506,
+   "column": "phone"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 121,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 229,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 730,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 208,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 195,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 968,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 882,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 832,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 800,
+   "column": "age"
+  },
+  {
+   "defect": "disguised_null",
+   "row": 272,
+   "column": "age"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 294,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 764,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 980,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 391,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 133,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 441,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 876,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 211,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 614,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 220,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 843,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 289,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 744,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 693,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 193,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 428,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 184,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 418,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 811,
+   "column": "email"
+  },
+  {
+   "defect": "invalid_format",
+   "row": 149,
+   "column": "email"
+  },
+  {
+   "defect": "outlier",
+   "row": 29,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 297,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 268,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 241,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 632,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 461,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 929,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 254,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 378,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 596,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 700,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 662,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 469,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 87,
+   "column": "amount"
+  },
+  {
+   "defect": "outlier",
+   "row": 10,
+   "column": "amount"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 139,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 954,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 1,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 986,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 194,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 288,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 230,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 396,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 280,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 532,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 676,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 855,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 623,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 295,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 100,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 420,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 621,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 951,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 416,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 82,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 147,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 541,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 6,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 203,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 943,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 298,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 325,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 591,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 38,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 162,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 694,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 79,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 227,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 509,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 17,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 107,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 221,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 935,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 395,
+   "column": "city"
+  },
+  {
+   "defect": "inconsistent_category",
+   "row": 28,
+   "column": "city"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 480,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 136,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 892,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 331,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 709,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 407,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 703,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 217,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 977,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 392,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 725,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 433,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 753,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 611,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 262,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 74,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 97,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 570,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 60,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 53,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 340,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 240,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 482,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 362,
+   "column": "end_date"
+  },
+  {
+   "defect": "rule_violation_end_before_start",
+   "row": 620,
+   "column": "end_date"
+  },
+  {
+   "defect": "duplicate",
+   "row": 1000,
+   "column": null,
+   "duplicate_of_row": 686
+  },
+  {
+   "defect": "duplicate",
+   "row": 1001,
+   "column": null,
+   "duplicate_of_row": 821
+  },
+  {
+   "defect": "duplicate",
+   "row": 1002,
+   "column": null,
+   "duplicate_of_row": 612
+  },
+  {
+   "defect": "duplicate",
+   "row": 1003,
+   "column": null,
+   "duplicate_of_row": 726
+  },
+  {
+   "defect": "duplicate",
+   "row": 1004,
+   "column": null,
+   "duplicate_of_row": 766
+  },
+  {
+   "defect": "duplicate",
+   "row": 1005,
+   "column": null,
+   "duplicate_of_row": 829
+  },
+  {
+   "defect": "duplicate",
+   "row": 1006,
+   "column": null,
+   "duplicate_of_row": 46
+  },
+  {
+   "defect": "duplicate",
+   "row": 1007,
+   "column": null,
+   "duplicate_of_row": 5
+  },
+  {
+   "defect": "duplicate",
+   "row": 1008,
+   "column": null,
+   "duplicate_of_row": 259
+  },
+  {
+   "defect": "duplicate",
+   "row": 1009,
+   "column": null,
+   "duplicate_of_row": 516
+  },
+  {
+   "defect": "duplicate",
+   "row": 1010,
+   "column": null,
+   "duplicate_of_row": 634
+  },
+  {
+   "defect": "duplicate",
+   "row": 1011,
+   "column": null,
+   "duplicate_of_row": 390
+  },
+  {
+   "defect": "duplicate",
+   "row": 1012,
+   "column": null,
+   "duplicate_of_row": 309
+  },
+  {
+   "defect": "duplicate",
+   "row": 1013,
+   "column": null,
+   "duplicate_of_row": 404
+  },
+  {
+   "defect": "duplicate",
+   "row": 1014,
+   "column": null,
+   "duplicate_of_row": 687
+  },
+  {
+   "defect": "duplicate",
+   "row": 1015,
+   "column": null,
+   "duplicate_of_row": 379
+  },
+  {
+   "defect": "duplicate",
+   "row": 1016,
+   "column": null,
+   "duplicate_of_row": 135
+  },
+  {
+   "defect": "duplicate",
+   "row": 1017,
+   "column": null,
+   "duplicate_of_row": 572
+  },
+  {
+   "defect": "duplicate",
+   "row": 1018,
+   "column": null,
+   "duplicate_of_row": 42
+  },
+  {
+   "defect": "duplicate",
+   "row": 1019,
+   "column": null,
+   "duplicate_of_row": 594
+  },
+  {
+   "defect": "duplicate",
+   "row": 1020,
+   "column": null,
+   "duplicate_of_row": 183
+  },
+  {
+   "defect": "duplicate",
+   "row": 1021,
+   "column": null,
+   "duplicate_of_row": 999
+  },
+  {
+   "defect": "duplicate",
+   "row": 1022,
+   "column": null,
+   "duplicate_of_row": 173
+  },
+  {
+   "defect": "duplicate",
+   "row": 1023,
+   "column": null,
+   "duplicate_of_row": 515
+  },
+  {
+   "defect": "duplicate",
+   "row": 1024,
+   "column": null,
+   "duplicate_of_row": 504
+  },
+  {
+   "defect": "duplicate",
+   "row": 1025,
+   "column": null,
+   "duplicate_of_row": 347
+  },
+  {
+   "defect": "duplicate",
+   "row": 1026,
+   "column": null,
+   "duplicate_of_row": 479
+  },
+  {
+   "defect": "duplicate",
+   "row": 1027,
+   "column": null,
+   "duplicate_of_row": 893
+  },
+  {
+   "defect": "duplicate",
+   "row": 1028,
+   "column": null,
+   "duplicate_of_row": 997
+  },
+  {
+   "defect": "duplicate",
+   "row": 1029,
+   "column": null,
+   "duplicate_of_row": 324
+  },
+  {
+   "defect": "duplicate",
+   "row": 1030,
+   "column": null,
+   "duplicate_of_row": 727
+  },
+  {
+   "defect": "duplicate",
+   "row": 1031,
+   "column": null,
+   "duplicate_of_row": 543
+  },
+  {
+   "defect": "duplicate",
+   "row": 1032,
+   "column": null,
+   "duplicate_of_row": 443
+  },
+  {
+   "defect": "duplicate",
+   "row": 1033,
+   "column": null,
+   "duplicate_of_row": 145
+  },
+  {
+   "defect": "duplicate",
+   "row": 1034,
+   "column": null,
+   "duplicate_of_row": 888
+  },
+  {
+   "defect": "duplicate",
+   "row": 1035,
+   "column": null,
+   "duplicate_of_row": 119
+  },
+  {
+   "defect": "duplicate",
+   "row": 1036,
+   "column": null,
+   "duplicate_of_row": 320
+  },
+  {
+   "defect": "duplicate",
+   "row": 1037,
+   "column": null,
+   "duplicate_of_row": 45
+  },
+  {
+   "defect": "duplicate",
+   "row": 1038,
+   "column": null,
+   "duplicate_of_row": 130
+  },
+  {
+   "defect": "duplicate",
+   "row": 1039,
+   "column": null,
+   "duplicate_of_row": 511
+  },
+  {
+   "defect": "duplicate",
+   "row": 1040,
+   "column": null,
+   "duplicate_of_row": 854
+  },
+  {
+   "defect": "duplicate",
+   "row": 1041,
+   "column": null,
+   "duplicate_of_row": 287
+  },
+  {
+   "defect": "duplicate",
+   "row": 1042,
+   "column": null,
+   "duplicate_of_row": 765
+  },
+  {
+   "defect": "duplicate",
+   "row": 1043,
+   "column": null,
+   "duplicate_of_row": 369
+  },
+  {
+   "defect": "duplicate",
+   "row": 1044,
+   "column": null,
+   "duplicate_of_row": 440
+  },
+  {
+   "defect": "duplicate",
+   "row": 1045,
+   "column": null,
+   "duplicate_of_row": 958
+  },
+  {
+   "defect": "duplicate",
+   "row": 1046,
+   "column": null,
+   "duplicate_of_row": 269
+  },
+  {
+   "defect": "duplicate",
+   "row": 1047,
+   "column": null,
+   "duplicate_of_row": 627
+  },
+  {
+   "defect": "duplicate",
+   "row": 1048,
+   "column": null,
+   "duplicate_of_row": 849
+  },
+  {
+   "defect": "duplicate",
+   "row": 1049,
+   "column": null,
+   "duplicate_of_row": 779
+  }
+ ]
+}

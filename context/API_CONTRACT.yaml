@@ -1,0 +1,70 @@
+openapi: 3.0.3
+info:
+  title: Data Quality Workbench API
+  version: 0.1.0
+  description: Single source of truth between UI and backend. Changes need PM approval.
+servers: [{url: /api/v1}]
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties: {code: {type: string}, message: {type: string}, details: {type: object}}
+    Job:
+      type: object
+      properties: {id: {type: string}, type: {type: string}, status: {type: string, enum: [queued, running, done, failed, cancelled]}, progress: {type: integer}, error: {type: string, nullable: true}}
+    Dataset:
+      type: object
+      properties: {id: {type: string}, name: {type: string}, source_id: {type: string}, latest_version_id: {type: string}}
+    DatasetVersion:
+      type: object
+      properties: {id: {type: string}, dataset_id: {type: string}, number: {type: integer}, kind: {type: string, enum: [snapshot, cleaned]}, parent_version_id: {type: string, nullable: true}, row_count: {type: integer}, col_count: {type: integer}}
+    Issue:
+      type: object
+      properties: {id: {type: string}, type: {type: string}, dimension: {type: string}, column: {type: string}, severity: {type: string}, affected_count: {type: integer}, why_text: {type: string}, status: {type: string, enum: [open, valid, ignored]}}
+paths:
+  /auth/login: {post: {summary: Login, responses: {"200": {description: token}}}}
+  /jobs/{id}: {get: {summary: Job status, responses: {"200": {description: Job}}}}
+  /jobs/{id}/cancel: {post: {summary: Cancel job, responses: {"200": {description: ok}}}}
+  # F1
+  /sources/files: {post: {summary: Upload file (multipart), responses: {"201": {description: dataset preview}}}}
+  /sources/databases: {post: {summary: Create DB source (read-only creds), responses: {"201": {description: source}}}}
+  /sources/{id}/test: {post: {summary: Test connection, responses: {"200": {description: ok}}}}
+  /sources/{id}/schemas: {get: {summary: Discover schemas/tables, responses: {"200": {description: tree}}}}
+  /sources/{id}/snapshot: {post: {summary: Snapshot table or query into dataset, responses: {"202": {description: Job}}}}
+  /sources/{id}: {patch: {summary: Edit, responses: {"200": {description: ok}}}, delete: {summary: Disconnect, responses: {"204": {description: ok}}}}
+  /sources/{id}/refresh: {post: {summary: Re-snapshot as new snapshot version, responses: {"202": {description: Job}}}}
+  # F2
+  /datasets: {get: {summary: List datasets, responses: {"200": {description: Dataset[]}}}}
+  /datasets/{id}: {get: {summary: Metadata, responses: {"200": {description: Dataset}}}}
+  /datasets/{id}/versions: {get: {summary: List versions, responses: {"200": {description: DatasetVersion[]}}}}
+  /versions/{id}/columns: {get: {summary: Columns and types, responses: {"200": {description: ok}}}}
+  /versions/{id}/rows: {get: {summary: "Paginated preview (page, page_size)", responses: {"200": {description: rows}}}}
+  # F3
+  /versions/{id}/profile: {post: {summary: Start profiling job, responses: {"202": {description: Job}}}, get: {summary: Get cached profile, responses: {"200": {description: profile}, "404": {description: not run}}}}
+  # F4
+  /datasets/{id}/rules: {get: {summary: List rules, responses: {"200": {description: ok}}}, post: {summary: Create custom rule, responses: {"201": {description: rule}, "422": {description: invalid expression}}}}
+  /versions/{id}/assessment: {post: {summary: Run assessment job, responses: {"202": {description: Job}}}, get: {summary: Scores and issues board, responses: {"200": {description: assessment}}}}
+  # F5
+  /issues/{id}: {get: {summary: Issue detail, responses: {"200": {description: Issue}}}}
+  /issues/{id}/records: {get: {summary: Affected records with flagged cells (paginated), responses: {"200": {description: records}}}}
+  /issues/{id}/status: {patch: {summary: "Mark valid / ignored / open (recalculates score)", responses: {"200": {description: ok}}}}
+  /issues/{id}/export: {get: {summary: Export affected rows CSV, responses: {"200": {description: file}}}}
+  # F6
+  /issues/{id}/recommendations: {get: {summary: Recommended actions, responses: {"200": {description: ok}}}}
+  /actions: {post: {summary: Propose action with config, responses: {"201": {description: action}}}}
+  /actions/{id}/preview: {get: {summary: Before/after + rows affected, responses: {"200": {description: preview}}}}
+  /actions/{id}/approve: {post: {summary: Approver only, responses: {"200": {description: ok}, "403": {description: not approver}}}}
+  /actions/{id}/apply: {post: {summary: Apply as new version (approved only), responses: {"202": {description: Job}}}}
+  /versions/{id}/restore: {post: {summary: Undo / restore to this version as latest, responses: {"200": {description: ok}}}}
+  # F7
+  /comparisons: {post: {summary: Compare two versions (metrics or saved SQL), responses: {"202": {description: Job}}}}
+  /comparisons/{id}: {get: {summary: Side-by-side values, deltas, distribution overlay, responses: {"200": {description: result}}}}
+  # F8
+  /reports: {post: {summary: Generate report (dataset, versions, sections, format), responses: {"202": {description: Job}}}}
+  /reports/{id}/download: {get: {summary: Download PDF/HTML/Excel, responses: {"200": {description: file}}}}
+  /reports/{id}/share: {post: {summary: Create expiring share link, responses: {"201": {description: link}}}}
+  # Admin / audit
+  /audit: {get: {summary: Audit events (filter by entity, actor), responses: {"200": {description: events}}}}

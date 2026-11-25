@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.db
+backend/data/metadata.db
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+backend/data/reports/*
+!backend/data/reports/.gitkeep
+backend/data/datasets/*
+!backend/data/datasets/.gitkeep
