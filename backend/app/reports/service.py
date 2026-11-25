@@ -20,7 +20,7 @@ def generate_report_content(
     if not dataset:
         raise HTTPException(status_code=404, detail={"error": {"code": "NOT_FOUND", "message": "Dataset not found", "details": {}}})
 
-    versions = db.query(DatasetVersion).filter(DatasetVersion.id.isin(version_ids)).order_by(DatasetVersion.number.asc()).all()
+    versions = db.query(DatasetVersion).filter(DatasetVersion.id.in_(version_ids)).order_by(DatasetVersion.number.asc()).all()
     latest_v = versions[-1] if versions else None
 
     # Assessment & Scores
@@ -121,7 +121,7 @@ def build_html_report(data: dict) -> str:
         <div class="card">
             <h2>Quality Assessment Summary</h2>
             <div style="font-size: 36px; font-weight: 800; color: #2563eb; margin-bottom: 16px;">
-                Overall Score: {data.get('assessment', {}).get('overall_score', 'N/A')} / 100
+                Overall Score: {(data.get('assessment') or {}).get('overall_score', 'N/A')} / 100
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;">
                 {scores_html}
